@@ -14,6 +14,11 @@
 		3EA979F319EBE74500628D94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA979F219EBE74500628D94 /* Images.xcassets */; };
 		3EA979F619EBE74500628D94 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA979F419EBE74500628D94 /* LaunchScreen.xib */; };
 		3EA97A0219EBE74600628D94 /* BeersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA97A0119EBE74600628D94 /* BeersTests.m */; };
+		3EA97A0D19EBE78300628D94 /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA97A0C19EBE78300628D94 /* Beer.m */; };
+		3EA97A1319EC047A00628D94 /* beerList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EA97A1219EC047A00628D94 /* beerList.plist */; };
+		3EA97A1619EC07A200628D94 /* Beers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA97A1519EC07A200628D94 /* Beers.m */; };
+		3EA97A1819EC0FC200628D94 /* BeersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA97A1719EC0FC200628D94 /* BeersViewController.xib */; };
+		3EA97A2119EC165100628D94 /* UIImage+UrlImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA97A2019EC165100628D94 /* UIImage+UrlImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,14 @@
 		3EA979FB19EBE74600628D94 /* BeersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA97A0019EBE74600628D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EA97A0119EBE74600628D94 /* BeersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeersTests.m; sourceTree = "<group>"; };
+		3EA97A0B19EBE78300628D94 /* Beer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Beer.h; path = Model/Beer.h; sourceTree = "<group>"; };
+		3EA97A0C19EBE78300628D94 /* Beer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Beer.m; path = Model/Beer.m; sourceTree = "<group>"; };
+		3EA97A1219EC047A00628D94 /* beerList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = beerList.plist; sourceTree = "<group>"; };
+		3EA97A1419EC07A200628D94 /* Beers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beers.h; sourceTree = "<group>"; };
+		3EA97A1519EC07A200628D94 /* Beers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beers.m; sourceTree = "<group>"; };
+		3EA97A1719EC0FC200628D94 /* BeersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeersViewController.xib; sourceTree = "<group>"; };
+		3EA97A1F19EC165100628D94 /* UIImage+UrlImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UrlImage.h"; sourceTree = "<group>"; };
+		3EA97A2019EC165100628D94 /* UIImage+UrlImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UrlImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +96,10 @@
 			children = (
 				3EA979E919EBE74500628D94 /* AppDelegate.h */,
 				3EA979EA19EBE74500628D94 /* AppDelegate.m */,
-				3EA979EC19EBE74500628D94 /* ViewController.h */,
-				3EA979ED19EBE74500628D94 /* ViewController.m */,
-				3EA979EF19EBE74500628D94 /* Main.storyboard */,
-				3EA979F219EBE74500628D94 /* Images.xcassets */,
-				3EA979F419EBE74500628D94 /* LaunchScreen.xib */,
+				3EA97A0E19EBE78C00628D94 /* Model */,
+				3EA97A1019EBE7AE00628D94 /* Controller */,
+				3EA97A0F19EBE7A300628D94 /* View */,
+				3EA97A1119EC045500628D94 /* Util */,
 				3EA979E519EBE74500628D94 /* Supporting Files */,
 			);
 			path = Beers;
@@ -117,6 +129,47 @@
 				3EA97A0019EBE74600628D94 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3EA97A0E19EBE78C00628D94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3EA97A0B19EBE78300628D94 /* Beer.h */,
+				3EA97A0C19EBE78300628D94 /* Beer.m */,
+				3EA97A1419EC07A200628D94 /* Beers.h */,
+				3EA97A1519EC07A200628D94 /* Beers.m */,
+				3EA97A1F19EC165100628D94 /* UIImage+UrlImage.h */,
+				3EA97A2019EC165100628D94 /* UIImage+UrlImage.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3EA97A0F19EBE7A300628D94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3EA979F219EBE74500628D94 /* Images.xcassets */,
+				3EA979EF19EBE74500628D94 /* Main.storyboard */,
+				3EA979F419EBE74500628D94 /* LaunchScreen.xib */,
+				3EA97A1719EC0FC200628D94 /* BeersViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3EA97A1019EBE7AE00628D94 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3EA979EC19EBE74500628D94 /* ViewController.h */,
+				3EA979ED19EBE74500628D94 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3EA97A1119EC045500628D94 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3EA97A1219EC047A00628D94 /* beerList.plist */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +252,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EA97A1819EC0FC200628D94 /* BeersViewController.xib in Resources */,
 				3EA979F119EBE74500628D94 /* Main.storyboard in Resources */,
 				3EA979F619EBE74500628D94 /* LaunchScreen.xib in Resources */,
+				3EA97A1319EC047A00628D94 /* beerList.plist in Resources */,
 				3EA979F319EBE74500628D94 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EA97A1619EC07A200628D94 /* Beers.m in Sources */,
+				3EA97A2119EC165100628D94 /* UIImage+UrlImage.m in Sources */,
 				3EA979EE19EBE74500628D94 /* ViewController.m in Sources */,
 				3EA979EB19EBE74500628D94 /* AppDelegate.m in Sources */,
 				3EA979E819EBE74500628D94 /* main.m in Sources */,
+				3EA97A0D19EBE78300628D94 /* Beer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

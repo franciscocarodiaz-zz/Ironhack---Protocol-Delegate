@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "Beer.h"
+#import "Beers.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,55 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    Beers *beers = [[Beers alloc] init];
+    
+    self.theBeers = [beers allBeers];
+    
+    // 1. Create my UIWindow
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // 2. Show my list (Launch my first) ViewController
+    
+    // Pointer created on the stack
+    ViewController *vc = [[ViewController alloc] initWithNibName:@"BeersViewController" bundle:nil];
+    vc.theBeers = self.theBeers;
+    
+    [self.window setRootViewController:vc];
+    
+    [self.window makeKeyAndVisible];
+    
+    
+    
+    /*
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"beerList" ofType:@"pList"];
+    
+    NSArray *userList = [NSArray arrayWithContentsOfFile:filePath];
+    
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    
+    for (int i=0; i<userList.count; i++) {
+        NSDictionary *d = [userList objectAtIndex:i];
+        Beer *b = [[Beer alloc] init];
+        b.name  = [d valueForKey:@"name"];
+        b.country_of_origin  = [d valueForKey:@"country_of_origin"];
+        b.alcoholic_grade  = [[d valueForKey:@"alcoholic_grade"] intValue];
+        b.url_to_photo  = [d valueForKey:@"url_to_photo"];
+        [result addObject:b];
+    }
+    
+    
+     for (NSDictionary *d in userList) {
+     Beer *b = [[Beer alloc] init];
+     b.name  = [d valueForKey:@"name"];
+     b.country_of_origin  = [d valueForKey:@"country_of_origin"];
+     b.alcoholic_grade  = [d valueForKey:@"alcoholic_grade"];
+     b.url_to_photo  = [d valueForKey:@"url_to_photo"];
+     [result addObject:b];
+     }
+     */
+    
     return YES;
 }
 
