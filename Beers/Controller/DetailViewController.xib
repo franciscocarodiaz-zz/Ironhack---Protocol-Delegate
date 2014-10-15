@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController">
+            <connections>
+                <outlet property="gradePicker" destination="qh9-A8-z49" id="6PV-qb-THs"/>
+                <outlet property="txtBeerName" destination="X73-RZ-llG" id="Obs-jx-QmI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfL-cJ-XDq">
+                    <rect key="frame" x="526" y="562" width="66" height="30"/>
+                    <color key="backgroundColor" red="0.85312491655349731" green="0.82549530267715454" blue="0.72475326061248779" alpha="0.75221354169999999" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="66" id="qrI-UP-P9S"/>
+                    </constraints>
+                    <state key="normal" title="Cancel">
+                        <color key="titleColor" red="0.044593766331672668" green="0.04173838347196579" blue="0.04169948399066925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="touchCancelButton:" destination="-1" eventType="touchUpInside" id="ptg-u2-hlH"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X73-RZ-llG">
+                    <rect key="frame" x="193" y="175" width="215" height="30"/>
+                    <color key="backgroundColor" red="0.85312491655349731" green="0.82549530267715454" blue="0.72475326061248779" alpha="0.75221354169999999" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="215" id="QM3-ue-3c5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qh9-A8-z49">
+                    <rect key="frame" x="0.0" y="248" width="600" height="162"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="AmT-B3-Jqf"/>
+                        <outlet property="delegate" destination="-1" id="7Gu-kH-fc2"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qh9-A8-z49" firstAttribute="top" secondItem="X73-RZ-llG" secondAttribute="bottom" constant="43" id="1ez-fE-26X"/>
+                <constraint firstItem="X73-RZ-llG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="175" id="AiM-Km-uI2"/>
+                <constraint firstItem="X73-RZ-llG" firstAttribute="centerX" secondItem="qh9-A8-z49" secondAttribute="centerX" id="Kid-GM-mpw"/>
+                <constraint firstItem="NfL-cJ-XDq" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottomMargin" id="Nak-UU-AkV"/>
+                <constraint firstItem="NfL-cJ-XDq" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="cx7-AN-HCI"/>
+                <constraint firstAttribute="trailing" secondItem="qh9-A8-z49" secondAttribute="trailing" id="nOD-Wk-nH2"/>
+                <constraint firstItem="qh9-A8-z49" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uZj-b6-LDv"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+        </view>
+    </objects>
+</document>

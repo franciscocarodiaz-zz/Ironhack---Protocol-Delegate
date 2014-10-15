@@ -11,6 +11,8 @@
 @interface Beers : Beer
 
 @property (nonatomic, strong) NSMutableArray *beerList;
+
 - (NSMutableArray *) allBeers;
+- (void) addBeer:(Beer *)beer;
 
 @end

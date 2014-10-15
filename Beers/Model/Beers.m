@@ -22,6 +22,10 @@
     return self.beerList;
 }
 
+- (void) addBeer:(Beer *)beer{
+    [self.beerList addObject:beer];
+}
+
 // lazy instantiation getter
 - (NSMutableArray *)beerList{
     if(_beerList == nil){

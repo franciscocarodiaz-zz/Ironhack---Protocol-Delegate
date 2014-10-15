@@ -31,10 +31,14 @@
     // 2. Show my list (Launch my first) ViewController
     
     // Pointer created on the stack
-    ViewController *vc = [[ViewController alloc] initWithNibName:@"BeersViewController" bundle:nil];
+    ViewController *vc = [[ViewController alloc] initWithNibName:@"BeersViewController" bundle:[NSBundle mainBundle]];
     vc.theBeers = self.theBeers;
     
-    [self.window setRootViewController:vc];
+    // nav controller
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    //[self.window setRootViewController:vc];
+    [self.window setRootViewController:nav];
     
     [self.window makeKeyAndVisible];
     

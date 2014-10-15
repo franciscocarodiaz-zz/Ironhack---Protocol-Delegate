@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "Beers.h"
 #import "UIImage+UrlImage.h"
 #define NUMBER_OF_SECTIONS 1
 
@@ -21,7 +20,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Duff Land";
     
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.backgroundColor = [UIColor brownColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor brownColor];
+    
+    [self addBeerButtonToNavigationBar];
+}
+
+- (void) addBeerButtonToNavigationBar{
+    UIBarButtonItem *b = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addNewBeerButtonPressed)];
+    [self.navigationItem setRightBarButtonItem:b];
+}
+
+- (void) addNewBeerButtonPressed{
+    DetailViewController *vc = [[DetailViewController alloc] init];
+    vc.delegate = self;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -44,21 +60,21 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"mycell"];
     }
-    [cell setBackgroundColor:[UIColor lightGrayColor]];
-    
+    [cell setBackgroundColor:[UIColor clearColor]];
+    [[cell backgroundView] setBackgroundColor:[UIColor brownColor]];
     
     NSString *cellTitleText;
     NSString *cellDetailText;
     NSString *cellImage;
     
     Beer *currentBeer = [self.theBeers objectAtIndex:indexPath.row];
-    cellTitleText = currentBeer.name;
-    cellDetailText = [NSString stringWithFormat:@"%@, %f",currentBeer.country_of_origin,currentBeer.alcoholic_grade] ;
+    cellTitleText = [currentBeer.name capitalizedString];
+    cellDetailText = [NSString stringWithFormat:@"%@, %.1f%%",[currentBeer.country_of_origin capitalizedString],currentBeer.alcoholic_grade];
     cellImage = currentBeer.url_to_photo;
     
     cell.textLabel.text = cellTitleText;
     cell.detailTextLabel.text = cellDetailText;
-    cell.imageView.image = [UIImage imageWithUrlString:currentBeer.url_to_photo];
+    //cell.imageView.image = [UIImage imageWithUrlString:currentBeer.url_to_photo];
     
     return cell;
     
@@ -79,10 +95,24 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     Beer *currentBeer = self.theBeers[indexPath.row];
     NSLog(@"User touching row: %lu which constains %@", indexPath.row, currentBeer.name);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    // 2. Move to the DetailViewController
+    
+    DetailViewController *vc = [[DetailViewController alloc] init];
+    //vc.beer = currentBeer;
+    [vc setBeer:currentBeer]; // property dependency injection
+    vc.delegate = self;
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+    /* 1. Load Alert view
     UIAlertController *alert = [UIAlertController
                                 alertControllerWithTitle:@"Alert"
                                 message:@"You have taped on something"
@@ -95,6 +125,7 @@
     [alert addAction:cancel];
     
     [self presentViewController:alert animated:YES completion:nil];
+    */
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
@@ -102,6 +133,22 @@
     NSString *title;
     title = @"International Beers";
     return title;
+}
+
+#pragma mark - Edit Beer Delegate Methods
+
+-(void)editBeerDidFinish:(Beer *)beer{
+    
+    //[self.theBeers addObject:beer];
+#warning fix side effect and do it right
+    
+    // Not the most efficient
+    [self.tableView reloadData];
+}
+
+-(void)addBeerDidFinish:(Beer *)beer{
+    [self.theBeers addObject:beer];
+    [self.tableView reloadData];
 }
 
 
