@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E0D475A19F126F00098D3D6 /* usaflag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3E0D475C19F126F00098D3D6 /* usaflag.jpg */; };
+		3E16B03B19EED0EC00AA0604 /* BeerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16B03A19EED0EC00AA0604 /* BeerCell.m */; };
 		3EA979E819EBE74500628D94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA979E719EBE74500628D94 /* main.m */; };
 		3EA979EB19EBE74500628D94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA979EA19EBE74500628D94 /* AppDelegate.m */; };
 		3EA979EE19EBE74500628D94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA979ED19EBE74500628D94 /* ViewController.m */; };
@@ -17,10 +19,8 @@
 		3EA97A0D19EBE78300628D94 /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA97A0C19EBE78300628D94 /* Beer.m */; };
 		3EA97A1319EC047A00628D94 /* beerList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EA97A1219EC047A00628D94 /* beerList.plist */; };
 		3EA97A1619EC07A200628D94 /* Beers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA97A1519EC07A200628D94 /* Beers.m */; };
-		3EA97A1819EC0FC200628D94 /* BeersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA97A1719EC0FC200628D94 /* BeersViewController.xib */; };
 		3EA97A2119EC165100628D94 /* UIImage+UrlImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA97A2019EC165100628D94 /* UIImage+UrlImage.m */; };
 		3EA97A5A19ED13D400628D94 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA97A5819ED13D400628D94 /* DetailViewController.m */; };
-		3EA97A5B19ED13D400628D94 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA97A5919ED13D400628D94 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E0D474C19F10ECF0098D3D6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3E0D475719F11EAE0098D3D6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		3E0D475919F125D80098D3D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		3E0D475B19F126F00098D3D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Base; path = Base.lproj/usaflag.jpg; sourceTree = "<group>"; };
+		3E0D475D19F126FC0098D3D6 /* es */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = es; path = es.lproj/usaflag.jpg; sourceTree = "<group>"; };
+		3E16B03919EED0EC00AA0604 /* BeerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerCell.h; sourceTree = "<group>"; };
+		3E16B03A19EED0EC00AA0604 /* BeerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerCell.m; sourceTree = "<group>"; };
 		3EA979E219EBE74500628D94 /* Beers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA979E619EBE74500628D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EA979E719EBE74500628D94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,12 +59,10 @@
 		3EA97A1219EC047A00628D94 /* beerList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = beerList.plist; sourceTree = "<group>"; };
 		3EA97A1419EC07A200628D94 /* Beers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beers.h; sourceTree = "<group>"; };
 		3EA97A1519EC07A200628D94 /* Beers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beers.m; sourceTree = "<group>"; };
-		3EA97A1719EC0FC200628D94 /* BeersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeersViewController.xib; sourceTree = "<group>"; };
 		3EA97A1F19EC165100628D94 /* UIImage+UrlImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UrlImage.h"; sourceTree = "<group>"; };
 		3EA97A2019EC165100628D94 /* UIImage+UrlImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UrlImage.m"; sourceTree = "<group>"; };
 		3EA97A5719ED13D400628D94 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		3EA97A5819ED13D400628D94 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		3EA97A5919ED13D400628D94 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailViewController.xib; path = ../Controller/DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,7 @@
 			children = (
 				3EA979E919EBE74500628D94 /* AppDelegate.h */,
 				3EA979EA19EBE74500628D94 /* AppDelegate.m */,
+				3E0D475C19F126F00098D3D6 /* usaflag.jpg */,
 				3EA97A0E19EBE78C00628D94 /* Model */,
 				3EA97A1019EBE7AE00628D94 /* Controller */,
 				3EA97A0F19EBE7A300628D94 /* View */,
@@ -152,11 +158,11 @@
 		3EA97A0F19EBE7A300628D94 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3EA97A5919ED13D400628D94 /* DetailViewController.xib */,
 				3EA979F219EBE74500628D94 /* Images.xcassets */,
 				3EA979EF19EBE74500628D94 /* Main.storyboard */,
 				3EA979F419EBE74500628D94 /* LaunchScreen.xib */,
-				3EA97A1719EC0FC200628D94 /* BeersViewController.xib */,
+				3E16B03919EED0EC00AA0604 /* BeerCell.h */,
+				3E16B03A19EED0EC00AA0604 /* BeerCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 3EA979D919EBE74500628D94;
 			productRefGroup = 3EA979E319EBE74500628D94 /* Products */;
@@ -260,8 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EA97A1819EC0FC200628D94 /* BeersViewController.xib in Resources */,
-				3EA97A5B19ED13D400628D94 /* DetailViewController.xib in Resources */,
+				3E0D475A19F126F00098D3D6 /* usaflag.jpg in Resources */,
 				3EA979F119EBE74500628D94 /* Main.storyboard in Resources */,
 				3EA979F619EBE74500628D94 /* LaunchScreen.xib in Resources */,
 				3EA97A1319EC047A00628D94 /* beerList.plist in Resources */,
@@ -286,6 +292,7 @@
 				3EA97A1619EC07A200628D94 /* Beers.m in Sources */,
 				3EA97A2119EC165100628D94 /* UIImage+UrlImage.m in Sources */,
 				3EA979EE19EBE74500628D94 /* ViewController.m in Sources */,
+				3E16B03B19EED0EC00AA0604 /* BeerCell.m in Sources */,
 				3EA979EB19EBE74500628D94 /* AppDelegate.m in Sources */,
 				3EA979E819EBE74500628D94 /* main.m in Sources */,
 				3EA97A0D19EBE78300628D94 /* Beer.m in Sources */,
@@ -312,10 +319,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3E0D475C19F126F00098D3D6 /* usaflag.jpg */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E0D475B19F126F00098D3D6 /* Base */,
+				3E0D475D19F126FC0098D3D6 /* es */,
+			);
+			name = usaflag.jpg;
+			sourceTree = "<group>";
+		};
 		3EA979EF19EBE74500628D94 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3EA979F019EBE74500628D94 /* Base */,
+				3E0D475719F11EAE0098D3D6 /* es */,
+				3E0D475919F125D80098D3D6 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -324,6 +342,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3EA979F519EBE74500628D94 /* Base */,
+				3E0D474C19F10ECF0098D3D6 /* es */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

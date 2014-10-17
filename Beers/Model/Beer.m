@@ -1,16 +1,15 @@
-//
-//  Beer.m
-//  Beers
-//
-//  Created by Francisco Caro Diaz on 13/10/14.
-//  Copyright (c) 2014 ironhack. All rights reserved.
-//
-
 #import "Beer.h"
 #define EMPTY_VALUE @"ironHack"
 #define EMPTY_INT_VALUE 0.00
 
 @implementation Beer
+
++(Beer *)beerWithName:(NSString *)name{
+    return [[Beer alloc] initWithName:name];
+}
++(Beer *)beer{
+    return [self beerWithName:@"sdfsdfs"];
+}
 
 - (void) initBeer{
     [self setName:EMPTY_VALUE];

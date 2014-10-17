@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "DetailViewController.h"
 #import "Beers.h"
+#import "BeerCell.h"
 
 // or reference declaration -> @protocol EditBeerDelegate
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,EditBeerDelegate>
-
+//@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,EditBeerDelegate>
+@interface ViewController : UITableViewController <EditBeerDelegate>
 // model object
 @property (nonatomic, strong) NSMutableArray *theBeers;
 

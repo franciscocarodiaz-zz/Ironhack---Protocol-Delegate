@@ -1,0 +1,12 @@
+
+/* Class = "IBUILabel"; text = "Detail of the beer"; ObjectID = "2jl-ic-7FG"; */
+"2jl-ic-7FG.text" = "Detail of the beer";
+
+/* Class = "IBUINavigationItem"; title = "Duff Land"; ObjectID = "3s3-2M-AUb"; */
+"3s3-2M-AUb.title" = "Duff Land";
+
+/* Class = "IBUILabel"; text = "Name of the beer"; ObjectID = "4VC-PM-MPX"; */
+"4VC-PM-MPX.text" = "Name of the beer";
+
+/* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "A5K-CJ-LrG"; */
+"A5K-CJ-LrG.normalTitle" = "Cancel";

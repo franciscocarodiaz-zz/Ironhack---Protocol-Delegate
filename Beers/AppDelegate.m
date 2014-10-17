@@ -20,6 +20,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+#warning REMEMBER ME
+    //Beers *beers = [[Beers alloc] init];
+    //self.theBeers = [beers allBeers];
+    
+    
+    /* 1. With first BeerViewController.
     Beers *beers = [[Beers alloc] init];
     
     self.theBeers = [beers allBeers];
@@ -41,7 +47,7 @@
     [self.window setRootViewController:nav];
     
     [self.window makeKeyAndVisible];
-    
+    */
     
     
     /*

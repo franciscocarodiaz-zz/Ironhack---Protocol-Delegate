@@ -12,7 +12,7 @@
 
 @interface ViewController ()
 
-@property (nonatomic,weak) IBOutlet UITableView * tableView;
+//@property (nonatomic,weak) IBOutlet UITableView * tableView;
 
 @end
 
@@ -20,19 +20,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Duff Land";
+    
+#warning REMEMBER TO CLEAN THIS CORPSE
+    Beers *beers = [[Beers alloc] init];
+    self.theBeers = [beers allBeers];
+    
+    //self.title = @"Duff Land";
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.backgroundColor = [UIColor brownColor];
     self.navigationController.navigationBar.barTintColor = [UIColor brownColor];
     
-    [self addBeerButtonToNavigationBar];
+    //[self addBeerButtonToNavigationBar];
 }
 
+/*
 - (void) addBeerButtonToNavigationBar{
     UIBarButtonItem *b = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addNewBeerButtonPressed)];
     [self.navigationItem setRightBarButtonItem:b];
 }
+*/
 
 - (void) addNewBeerButtonPressed{
     DetailViewController *vc = [[DetailViewController alloc] init];
@@ -51,9 +58,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NSLog(@"section: %ld, row: %ld",(long)indexPath.section, (long)indexPath.row);
-    
+    /*
     UITableViewCell *cell;
-    
     // try to extract the info from the buffer
     cell = [tableView dequeueReusableCellWithIdentifier:@"mycell"];
     
@@ -62,6 +68,9 @@
     }
     [cell setBackgroundColor:[UIColor clearColor]];
     [[cell backgroundView] setBackgroundColor:[UIColor brownColor]];
+    */
+    
+    BeerCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BeerCell"];
     
     NSString *cellTitleText;
     NSString *cellDetailText;
@@ -72,9 +81,14 @@
     cellDetailText = [NSString stringWithFormat:@"%@, %.1f%%",[currentBeer.country_of_origin capitalizedString],currentBeer.alcoholic_grade];
     cellImage = currentBeer.url_to_photo;
     
+    cell.beer = currentBeer;
+    
+    // Without using viewcontroller
+    /*
     cell.textLabel.text = cellTitleText;
     cell.detailTextLabel.text = cellDetailText;
     //cell.imageView.image = [UIImage imageWithUrlString:currentBeer.url_to_photo];
+    */
     
     return cell;
     
@@ -93,6 +107,8 @@
     }
     */
 }
+
+/*
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -126,7 +142,10 @@
     
     [self presentViewController:alert animated:YES completion:nil];
     */
-}
+/*
+ }
+*/
+
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     
@@ -149,6 +168,21 @@
 -(void)addBeerDidFinish:(Beer *)beer{
     [self.theBeers addObject:beer];
     [self.tableView reloadData];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    if ([[segue identifier] isEqualToString:@"AddBeerSegue"]) {
+        [[segue destinationViewController] setDelegate:self];
+    }
+    if ([[segue identifier] isEqualToString:@"EditBeerSegue"]) {
+        DetailViewController *vc = [segue destinationViewController];
+        Beer *currentBeer = [self.theBeers objectAtIndex:[self.tableView.indexPathForSelectedRow row]];
+        vc.beer = currentBeer;
+        vc.delegate = self;
+    }
 }
 
 

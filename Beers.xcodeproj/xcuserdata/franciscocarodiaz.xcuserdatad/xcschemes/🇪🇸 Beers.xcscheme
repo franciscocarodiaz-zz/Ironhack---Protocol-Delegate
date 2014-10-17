@@ -20,20 +20,6 @@
                ReferencedContainer = "container:Beers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3EA979FA19EBE74600628D94"
-               BuildableName = "BeersTests.xctest"
-               BlueprintName = "BeersTests"
-               ReferencedContainer = "container:Beers.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -42,16 +28,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3EA979FA19EBE74600628D94"
-               BuildableName = "BeersTests.xctest"
-               BlueprintName = "BeersTests"
-               ReferencedContainer = "container:Beers.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -72,7 +48,8 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES"
-      language = "en">
+      language = "es"
+      region = "ES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
