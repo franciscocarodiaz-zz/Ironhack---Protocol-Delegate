@@ -100,6 +100,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="q41-Mh-Tsd" appends="YES" id="YIb-8M-d0T"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Q1T-9C-fk4"/>
                     <connections>
@@ -108,6 +112,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9Y-ZC-7Om" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="q41-Mh-Tsd">
+                    <connections>
+                        <action selector="hideKeyboard:" destination="Igr-Fc-4FX" id="ikQ-6B-A18"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="952" y="113"/>
         </scene>

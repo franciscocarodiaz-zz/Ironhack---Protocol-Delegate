@@ -24,6 +24,9 @@ typedef enum {
 @end
 
 @implementation DetailViewController
+- (IBAction)hideKeyboard:(id)sender {
+    [self.txtBeerName resignFirstResponder];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
