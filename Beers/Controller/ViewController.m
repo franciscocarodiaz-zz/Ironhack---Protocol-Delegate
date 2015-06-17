@@ -80,8 +80,10 @@
     cellTitleText = [currentBeer.name capitalizedString];
     cellDetailText = [NSString stringWithFormat:@"%@, %.1f%%",[currentBeer.country_of_origin capitalizedString],currentBeer.alcoholic_grade];
     cellImage = currentBeer.url_to_photo;
+    //cell.imageView.image = [UIImage imageWithUrlString:currentBeer.url_to_photo];
+    //cell.beer = currentBeer;
     
-    cell.beer = currentBeer;
+    [cell setBeer:currentBeer];
     
     // Without using viewcontroller
     /*
